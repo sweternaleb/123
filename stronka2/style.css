@@ -253,10 +253,7 @@ div.opis {
 }
 
 @media only screen and (max-width: 769px) {
-    .responsive {
-        width: 90%;
-        margin: auto
-    }
+
 
     ol {
         font-size: 17px;
@@ -285,9 +282,7 @@ div.opis {
         margin-top: 50px;
     }
 
-    div.galeria img {
-        width: auto;
-    }
+
 
     nav {
         font-size: 30px;
@@ -295,7 +290,7 @@ div.opis {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .responsive {}
+
 
     table {
         width: 90%;
