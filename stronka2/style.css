@@ -2,37 +2,43 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     margin-left: auto;
     margin-right: auto;
-\
+    \
 }
+
 nav {
     font-family: 'Lobster';
 }
+
 h1 {
     color: black;
     font-family: 'Lobster';
 }
+
 a {
     color: black;
     font-style: italic;
-    text-decoration:none;
+    text-decoration: none;
 }
+
 h2 {
     font-size: 30px;
     border-top: 3px dotted #DDD;
     padding-top: 30px;
     font-family: 'Lobster';
 }
+
 h3 {
     font-size: 30px;
     padding-top: 10px;
     font-family: 'Lobster';
 }
 
-.prawo{
-    text-align:right;
+.prawo {
+    text-align: right;
 }
-container {
-}
+
+container {}
+
 header {
     font-size: 35px;
     text-align: center;
@@ -40,6 +46,7 @@ header {
     padding-bottom: 0px;
     font-family: 'Lobster';
 }
+
 article {
     width: 100%;
     max-width: 900px;
@@ -49,30 +56,34 @@ article {
     padding-bottom: 20px;
     box-sizing: border-box;
 }
-article #artyku³_hist{
-    float:left;
+
+article #artyku³_hist {
+    float: left;
 }
+
 #nawigacja {
     float: left;
     width: 250px;
     position: fixed;
-    margin-top:60px;
-    margin-left:100px;
+    margin-top: 60px;
+    margin-left: 100px;
 }
-.cytat {
-    margin-top:50px;
-    padding-top: 50px;
-    text-align:center;
-}
-img {
 
+.cytat {
+    margin-top: 50px;
+    padding-top: 50px;
+    text-align: center;
 }
+
+img {}
+
 #kawa1 {
     height: 300px;
     margin: 0;
     width: 100%;
     padding-top: 30px;
 }
+
 #rotacja {
     animation: mymove 5s linear infinite;
     padding-top: 40px;
@@ -84,20 +95,23 @@ img {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
+
 footer {
     padding-top: 25px;
     padding-bottom: 15px;
-    width:100%;
+    width: 100%;
     border-top: 2px dotted #DDD;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    clear:both;
+    clear: both;
 }
+
 ol {
     list-style-type: none;
     padding: 0;
@@ -109,105 +123,109 @@ ol {
     text-align: center;
 }
 
-    /* wygl¹d wszystkich elementów - a - znajduj¹cych siê w elemencie - ol */
-    ol a {
-        display: block;
-        text-decoration: none;
-        color: white;
-        padding: 0 5px;
+/* wygl¹d wszystkich elementów - a - znajduj¹cych siê w elemencie - ol */
+ol a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0 5px;
 
-    }
+}
 
-    /* wygl¹d elementów - li - wszystkich dzieci elementu - ol */
-    ol > li {
-        float: left;
-        margin-left: 1px;
-        background-color: black;
-        height: 2em;
-        width: 18%;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        position: relative;
-    }
-    ol li a{
+/* wygl¹d elementów - li - wszystkich dzieci elementu - ol */
+ol > li {
+    float: left;
+    margin-left: 1px;
+    background-color: black;
+    height: 2em;
+    width: 18%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
 
-    }
-        /* wygl¹d elementu - li - pierwszego dziecka elementu - ol */
-        ol > li:first-child {
-            margin-left: 5%;
-        }
+ol li a {}
 
-        /* wygl¹d elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
-        ol > li:hover {
-            background-color: #EEE;
-        }
+/* wygl¹d elementu - li - pierwszego dziecka elementu - ol */
+ol > li:first-child {
+    margin-left: 5%;
+}
 
-            /* wygl¹d elementu - a - dziecka elementu - li - bêd¹cego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
-            ol > li:hover > a {
-                color: black;
-            }
+/* wygl¹d elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
+ol > li:hover {
+    background-color: #EEE;
+}
 
-            /* wygl¹d elementu - ul - dziecka elementu - li - bêd¹cego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
-            ol > li:hover > ul {
-               display: block;
-            }
+/* wygl¹d elementu - a - dziecka elementu - li - bêd¹cego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+ol > li:hover > a {
+    color: black;
+}
 
-        /* ------------------------CZÊŒÆ-ROZWIJANA-MENU------------------------ */
+/* wygl¹d elementu - ul - dziecka elementu - li - bêd¹cego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+ol > li:hover > ul {
+    display: block;
+}
 
-        /* wygl¹d g³ównych rozwijanych elementów - ul */
-    ol > li > ul {
-        display: none;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    ol >li> ul li:first-child{
-        margin-top:15px;
-    }
-        ol > li > ul a{
-            color:black;
-        }
+/* ------------------------CZÊŒÆ-ROZWIJANA-MENU------------------------ */
 
-            /* wygl¹d elementu - li - w czêœci rozwijanej */
-        ol > li > ul > li {
-            position: relative;
-            width: 100%;
-            background-color: #EEE;
-            top: 0;
-            border-top: 1px solid #FFF;
-        }
+/* wygl¹d g³ównych rozwijanych elementów - ul */
+ol > li > ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-                /* wygl¹d elementu - a - w czêœci rozwijanej */
-            ol > li > ul > li > a {
-                padding-top: 15px;
-                padding-bottom: 15px;
-            }
+ol > li > ul li:first-child {
+    margin-top: 15px;
+}
 
-                /* wygl¹d elementu - li - w czêœci rozwijanej, po najechaniu kursorem myszki na dany element - li */
-                ol > li > ul > li:hover {
-                    background-color: #DDD;
-                }
+ol > li > ul a {
+    color: black;
+}
 
-                    /* wygl¹d elementu - a - w czêœci rozwijanej, po najechaniu kursorem myszki na element - li */
-                    ol > li > ul > li:hover > a {
-                        color: black;
-                    }
+/* wygl¹d elementu - li - w czêœci rozwijanej */
+ol > li > ul > li {
+    position: relative;
+    width: 100%;
+    background-color: #EEE;
+    top: 0;
+    border-top: 1px solid #FFF;
+}
+
+/* wygl¹d elementu - a - w czêœci rozwijanej */
+ol > li > ul > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* wygl¹d elementu - li - w czêœci rozwijanej, po najechaniu kursorem myszki na dany element - li */
+ol > li > ul > li:hover {
+    background-color: #DDD;
+}
+
+/* wygl¹d elementu - a - w czêœci rozwijanej, po najechaniu kursorem myszki na element - li */
+ol > li > ul > li:hover > a {
+    color: black;
+}
+
 table {
     width: 100%;
     font-size: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
 th {
     border: 1px solid black;
     font-weight: normal;
 }
+
 .pierwszy_wiersz {
     font-weight: bold;
 }
 
-    div.galeria:hover {
-    }
+div.galeria:hover {}
 
 div.galeria img {
     width: 100%;
@@ -218,46 +236,61 @@ div.opis {
     padding: 15px;
     text-align: center;
 }
-.responsive{
-    width:42%;
-    float:left;
+
+.responsive {
+    width: 350px;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(230, 230, 230, 1);
+    margin: 5px;
+
 }
+
+.gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 @media only screen and (max-width: 769px) {
-    .responsive {
-        width: 90%;
-        margin: auto
+
+
+    ol {
+        font-size: 17px;
     }
-    ol{
-        font-size:17px;
-    }
+
     article {
         margin-left: 15px;
-        padding-right:20px;
+        padding-right: 20px;
         font-size: 20px;
     }
-    header{
-        font-size:18px;
+
+    header {
+        font-size: 18px;
     }
-    h1{
-        text-align:center;
+
+    h1 {
+        text-align: center;
     }
+
     h2 {
         text-align: center;
     }
+
     h3 {
         text-align: center;
         margin-top: 50px;
     }
-    div.galeria img {
-        width: auto;
-    }
-    nav{
-        font-size:30px;
+
+
+
+    nav {
+        font-size: 30px;
     }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .responsive {
-    }
+
 
     table {
         width: 90%;
