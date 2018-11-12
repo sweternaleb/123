@@ -7,9 +7,25 @@
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script type="text/javascript">
 
+
+        function count_clicks() {
+                localStorage.count = Number(localStorage.count) + 1;
+                zmienslajd();
+
+        }
+
+        function zmienslajd() {
+            var numer =localStorage.count%4+1 ;
+            var plik ="<img src=\"obrazek"+numer+".png\"/>";
+            document.getElementById("coffee").innerHTML = plik;
+        }
+
+        /*   document.write(localStorage.count);*/
+    </script>
 </head>
-<body>
+<body onload="zmienslajd()">
     <header>
         <h1>Moim Okiem na Kawę</h1>
     </header>
@@ -59,7 +75,8 @@
             a także wszystkimi rzeczami związanymi z nią. Na tej stronie przedstawie Ci według mnie najważniejsze rzeczy o których<br />
             powinieneś wiedzieć na jej temat.
         </p>
-        <img src="kawa.png" alt="kawa" id="rotacja" />
+        <div id="coffee" onclick="count_clicks()" style="cursor:pointer"></div>
+        <input type="submit" id="button" value="Wybierz swoją ulubioną kawe!" onclick="count_clicks()">
     </article>
     <footer>Wszelkie prawa zastrzeżone, Jakub Zwolski gr5 Informatyka</footer>
 

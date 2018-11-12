@@ -1,10 +1,8 @@
-body {
+ï»¿body {
     font-family: 'Roboto Condensed', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    \
 }
-
 nav {
     font-family: 'Lobster';
 }
@@ -19,6 +17,32 @@ a {
     font-style: italic;
     text-decoration: none;
 }
+#svg2707 {
+    height:100px;
+    padding-top:50px;
+    margin-left:300px;
+}
+#para {
+    animation: vibration 1s infinite;
+}
+@keyframes vibration{
+    0%{
+        transform:translateY(0px);
+    }
+    20% {
+        transform: translateY(5px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+    80% {
+        transform: translateY(0px);
+
+    }
+}
 
 h2 {
     font-size: 30px;
@@ -26,10 +50,12 @@ h2 {
     padding-top: 30px;
     font-family: 'Lobster';
 }
-
+#path2388{
+    fill:red;
+}
 h3 {
     font-size: 30px;
-    padding-top: 10px;
+    padding-top: 30px;
     font-family: 'Lobster';
 }
 
@@ -37,7 +63,8 @@ h3 {
     text-align: right;
 }
 
-container {}
+container {
+}
 
 header {
     font-size: 35px;
@@ -57,9 +84,9 @@ article {
     box-sizing: border-box;
 }
 
-article #artyku³_hist {
-    float: left;
-}
+    article #artykuÂ³_hist {
+        float: left;
+    }
 
 #nawigacja {
     float: left;
@@ -74,8 +101,15 @@ article #artyku³_hist {
     padding-top: 50px;
     text-align: center;
 }
+#button{
+    margin-left:300px;
+}
 
-img {}
+img {
+    margin-top:35px;
+    height:300px;
+   margin-left:200px;
+}
 
 #kawa1 {
     height: 300px;
@@ -123,91 +157,91 @@ ol {
     text-align: center;
 }
 
-/* wygl¹d wszystkich elementów - a - znajduj¹cych siê w elemencie - ol */
-ol a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 0 5px;
+    /* wyglÂ¹d wszystkich elementÃ³w - a - znajdujÂ¹cych siÃª w elemencie - ol */
+    ol a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 0 5px;
+    }
 
-}
+    /* wyglÂ¹d elementÃ³w - li - wszystkich dzieci elementu - ol */
+    ol > li {
+        float: left;
+        margin-left: 1px;
+        background-color: black;
+        height: 2em;
+        width: 18%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: relative;
+    }
 
-/* wygl¹d elementów - li - wszystkich dzieci elementu - ol */
-ol > li {
-    float: left;
-    margin-left: 1px;
-    background-color: black;
-    height: 2em;
-    width: 18%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: relative;
-}
+    ol li a {
+    }
 
-ol li a {}
+    /* wyglÂ¹d elementu - li - pierwszego dziecka elementu - ol */
+    ol > li:first-child {
+        margin-left: 5%;
+    }
 
-/* wygl¹d elementu - li - pierwszego dziecka elementu - ol */
-ol > li:first-child {
-    margin-left: 5%;
-}
+    /* wyglÂ¹d elementÃ³w - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
+    ol > li:hover {
+        background-color: #EEE;
+    }
 
-/* wygl¹d elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
-ol > li:hover {
-    background-color: #EEE;
-}
+        /* wyglÂ¹d elementu - a - dziecka elementu - li - bÃªdÂ¹cego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+        ol > li:hover > a {
+            color: black;
+        }
 
-/* wygl¹d elementu - a - dziecka elementu - li - bêd¹cego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
-ol > li:hover > a {
-    color: black;
-}
+        /* wyglÂ¹d elementu - ul - dziecka elementu - li - bÃªdÂ¹cego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+        ol > li:hover > ul {
+            display: block;
+        }
 
-/* wygl¹d elementu - ul - dziecka elementu - li - bêd¹cego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
-ol > li:hover > ul {
-    display: block;
-}
+    /* ------------------------CZÃŠÅ’Ã†-ROZWIJANA-MENU------------------------ */
 
-/* ------------------------CZÊŒÆ-ROZWIJANA-MENU------------------------ */
+    /* wyglÂ¹d gÂ³Ã³wnych rozwijanych elementÃ³w - ul */
+    ol > li > ul {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-/* wygl¹d g³ównych rozwijanych elementów - ul */
-ol > li > ul {
-    display: none;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        ol > li > ul li:first-child {
+            margin-top: 15px;
+        }
 
-ol > li > ul li:first-child {
-    margin-top: 15px;
-}
+        ol > li > ul a {
+            color: black;
+        }
 
-ol > li > ul a {
-    color: black;
-}
+        /* wyglÂ¹d elementu - li - w czÃªÅ“ci rozwijanej */
+        ol > li > ul > li {
+            position: relative;
+            width: 100%;
+            background-color: #EEE;
+            top: 0;
+            border-top: 1px solid #FFF;
+        }
 
-/* wygl¹d elementu - li - w czêœci rozwijanej */
-ol > li > ul > li {
-    position: relative;
-    width: 100%;
-    background-color: #EEE;
-    top: 0;
-    border-top: 1px solid #FFF;
-}
+            /* wyglÂ¹d elementu - a - w czÃªÅ“ci rozwijanej */
+            ol > li > ul > li > a {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
 
-/* wygl¹d elementu - a - w czêœci rozwijanej */
-ol > li > ul > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
+            /* wyglÂ¹d elementu - li - w czÃªÅ“ci rozwijanej, po najechaniu kursorem myszki na dany element - li */
+            ol > li > ul > li:hover {
+                background-color: #DDD;
+            }
 
-/* wygl¹d elementu - li - w czêœci rozwijanej, po najechaniu kursorem myszki na dany element - li */
-ol > li > ul > li:hover {
-    background-color: #DDD;
-}
-
-/* wygl¹d elementu - a - w czêœci rozwijanej, po najechaniu kursorem myszki na element - li */
-ol > li > ul > li:hover > a {
-    color: black;
-}
+                /* wyglÂ¹d elementu - a - w czÃªÅ“ci rozwijanej, po najechaniu kursorem myszki na element - li */
+                ol > li > ul > li:hover > a {
+                    color: black;
+                }
 
 table {
     width: 100%;
@@ -225,7 +259,8 @@ th {
     font-weight: bold;
 }
 
-div.galeria:hover {}
+div.galeria:hover {
+}
 
 div.galeria img {
     width: 100%;
@@ -243,7 +278,6 @@ div.opis {
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: rgba(230, 230, 230, 1);
     margin: 5px;
-
 }
 
 .gallery-wrapper {
@@ -258,6 +292,9 @@ div.opis {
     ol {
         font-size: 17px;
     }
+        ol li a {
+            padding:0 0px;
+        }
 
     article {
         margin-left: 15px;
@@ -301,8 +338,9 @@ div.opis {
     }
 
     article {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 30px;
+        padding-right: 30px;
+        font-size: 20px;
     }
 
     header {
