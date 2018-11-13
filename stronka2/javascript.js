@@ -28,7 +28,7 @@ function count_clicks() {
 
 function photolS() {
     if(localStorage.getItem("count") === null) {
-        localStorage.count = 1;
+        localStorage.setItem("count",1);
     }
     var numer = localStorage.count % 4 + 1;
     var plik = "<img src=\"obrazek" + numer + ".png\"/>";
