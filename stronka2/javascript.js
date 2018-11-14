@@ -18,7 +18,7 @@ function czas() {
         sessionStorage.minuta = minuta;
         sessionStorage.godzina = godzina;
     }
-    document.getElementById("elo").innerHTML = sessionStorage.godzina + ":" +sessionStorage.minuta + ":" +sessionStorage.sekunda;
+    document.getElementById("timersS").innerHTML = sessionStorage.godzina + ":" +sessionStorage.minuta + ":" +sessionStorage.sekunda;
 }
 
 function count_clicks() {
@@ -34,3 +34,65 @@ function photolS() {
     var plik = "<img src=\"obrazek" + numer + ".png\"/>";
     document.getElementById("coffee").innerHTML = plik;
 }
+
+function small() {
+    var small1 = document.getElementsByClassName("kawa1")[0];
+    small1.style.width = '60%';
+    small1.style.height = '200px';
+    var small1 = document.getElementsByClassName("kawa1")[1];
+    small1.style.width = '60%';
+    small1.style.height = '200px';
+    var small1 = document.getElementsByClassName("kawa1")[2];
+    small1.style.width = '60%';
+    small1.style.height = '200px';
+}
+function big() {
+    var small1 = document.getElementsByClassName("kawa1")[0];
+    small1.style.width = '100%';
+    small1.style.height = '350px';
+    var small1 = document.getElementsByClassName("kawa1")[1];
+    small1.style.width = '100%';
+    small1.style.height = '350px';
+    var small1 = document.getElementsByClassName("kawa1")[2];
+    small1.style.width = '100%';
+    small1.style.height = '350px';
+}
+function medium() {
+    var small1 = document.getElementsByClassName("kawa1")[0];
+    small1.style.width = '80%';
+    small1.style.height = '270px';
+    var small1 = document.getElementsByClassName("kawa1")[1];
+    small1.style.width = '80%';
+    small1.style.height = '270px';
+    var small1 = document.getElementsByClassName("kawa1")[2];
+    small1.style.width = '80%';
+    small1.style.height = '270px';
+}
+var a = 0;
+function appenTextbox() {
+    if (a == 0) {
+        var textbox = document.createElement('input');
+        var br = document.createElement("br");
+        var nick = document.createTextNode("Twoj nick: ");
+        br.id = 'br';
+        nick.id = 'nick';
+        textbox.type = 'text';
+        textbox.id = 'textbox';
+        var form = document.getElementById('theForm');
+        form.insertBefore(textbox, form.childNodes[7]);
+        form.insertBefore(br, form.childNodes[7]);
+        form.insertBefore(nick, form.childNodes[8]);
+        a = a + 1;
+    }
+    
+}
+function removeTextbox() {
+    document.getElementById("theForm").removeChild(document.getElementById('textbox'));
+    document.getElementById("theForm").removeChild(document.getElementById('br'));
+    document.getElementById("theForm").removeChild(document.getElementById('theForm').childNodes[7]);
+    a = 0;
+}
+
+$(function () {
+    $("#accordion").accordion();
+});

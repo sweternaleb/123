@@ -7,9 +7,11 @@
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascript.js"></script>
 </head>
-<body>
+<body onload="czas()">
     <header>
         <h1>Moim Okiem na Kawę</h1>
     </header>
@@ -41,50 +43,57 @@
             </li>
         </ol>
     </nav>
-    <article>
-        <h2>Kontakt</h2>
-        <p>
-            <form action="mailto:kuba.zwolski11@gmail.com" method="post">
-                Skontaktuj sie z nami!</br>
-                Nazwa użytkownika:
-                <input type="text" name="fname"><br>
-                <textarea rows="10" cols="80">Wyślij do nas wiadomość!</textarea><br />
-                <input type='reset' value='Reset'>
-                <input type='submit' value='Wyślij'>
-            </form>
-        </p>
-        <h2>Wypełnij ankiete dotyczącą strony!</h2><p>
-            <form action="mailto:kuba.zwolski11@gmail.com" method="post">
-                Skąd dowiedziałeś sie o stronie??<br />
-                <input type="checkbox" name="web" value="google">Przez Google<br>
-                <input type="checkbox" name="web" value="social_media">Przez media społecznościowe(Facebook, Instagram)<br>
-                <input type="checkbox" name="web" value="another_person">Od drugiej osoby<br>
-                Jak oceniasz treść strony?<br />
-                <input type="radio" name="grade1" value="1-2">1-2<br>
-                <input type="radio" name="grade1" value="3-4">3-4<br>
-                <input type="radio" name="grade1" value="5-6"> 5-6<br>
-                <input type="radio" name="grade1" value="7-8">7-8<br>
-                <input type="radio" name="grade1" value="9-10">9-10<br>
-                Jak oceniasz wygląd strony?<br />
-                <input type="radio" name="grade2" value="1-2">1-2<br>
-                <input type="radio" name="grade2" value="3-4">3-4<br>
-                <input type="radio" name="grade2" value="5-6"> 5-6<br>
-                <input type="radio" name="grade2" value="7-8">7-8<br>
-                <input type="radio" name="grade2" value="9-10">9-10<br>
-                Jak oglądasz tą stronę?<br />
-                <select name="jak_dlugo">
-					<option selected="selected">Jestem nowy</option>
-					<option>Od tygodnia</option>
-					<option>Od miesiąca</option>
-				</select><br />
-                Uwagi dotyczące strony:<br />
-                <textarea rows="10" cols="80">Uwagi na temat strony</textarea><br />
-                <input type='reset' value='Reset'>
-                <input type='submit' value='Wyślij'>
-            </form>
-        </p>
+
+    <article><br/><br />
+        <div id="accordion">
+            <h2 class="onhover">Wypełnij ankiete dotyczącą strony! ↓</h2>
+            <div>
+                <form action="mailto:kuba.zwolski11@gmail.com" method="post" id="theForm">
+                    <input type="radio" onclick="removeTextbox()" name="grade1" value="1" checked="checked">Anonimowo<br />
+                    <input type="radio" onclick="appenTextbox()" id="test" name="grade1" value="1">Chce podać nick:<br />
+                    Skąd dowiedziałeś sie o stronie?<br />
+                    <input type="checkbox" name="web" value="google">Przez Google<br>
+                    <input type="checkbox" name="web" value="social_media">Przez media społecznościowe(Facebook, Instagram)<br>
+                    <input type="checkbox" name="web" value="another_person">Od drugiej osoby<br>
+                    Jak oceniasz treść strony?<br />
+                    <input type="radio" name="grade1" value="1-2">1-2<br>
+                    <input type="radio" name="grade1" value="3-4">3-4<br>
+                    <input type="radio" name="grade1" value="5-6"> 5-6<br>
+                    <input type="radio" name="grade1" value="7-8">7-8<br>
+                    <input type="radio" name="grade1" value="9-10">9-10<br>
+                    Jak oceniasz wygląd strony?<br />
+                    <input type="radio" name="grade2" value="1-2">1-2<br>
+                    <input type="radio" name="grade2" value="3-4">3-4<br>
+                    <input type="radio" name="grade2" value="5-6"> 5-6<br>
+                    <input type="radio" name="grade2" value="7-8">7-8<br>
+                    <input type="radio" name="grade2" value="9-10">9-10<br>
+                    Jak długo oglądasz tą stronę?<br />
+                    <select name="jak_dlugo">
+                        <option selected="selected">Jestem nowy</option>
+                        <option>Od tygodnia</option>
+                        <option>Od miesiąca</option>
+                    </select><br />
+                    Uwagi dotyczące strony:<br />
+                    <textarea rows="10" cols="80">Uwagi na temat strony</textarea><br />
+                    <input type='reset' value='Reset' onclick="removeTextbox()">
+                    <input type='submit' value='Wyślij'><br />
+                </form>
+            </div>
+            <h3 class="onhover">Kontakt ↓</h3>
+            <div>
+                <form action="mailto:kuba.zwolski11@gmail.com" method="post">
+                    Skontaktuj sie z nami!<br />
+                    Podaj nick:
+                    <input type="text" name="nick" /><br />
+                    <textarea rows="10" cols="80">Wyślij do nas wiadomość!</textarea><br />
+                    <input type='reset' value='Reset'>
+                    <input type='submit' value='Wyślij'>
+                </form>
+            </div>
+        </div>
+        <span id="timersS"></span>
+        <span id="timersS1">Jesteś na stronie od godziny:</span>
     </article>
     <footer>Wszelkie prawa zastrzeżone, Jakub Zwolski gr5 Informatyka</footer>
-
 </body>
 </html>

@@ -8,10 +8,16 @@
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $(#button).tooltip();
+        } );
+    </script>
 </head>
 <body onload="czas(), photolS()">
     <header>
-        <div id="elo"></div>
         <h1>Moim Okiem na Kawę</h1>
     </header>
     <nav>
@@ -60,10 +66,12 @@
             a także wszystkimi rzeczami związanymi z nią. Na tej stronie przedstawie Ci według mnie najważniejsze rzeczy o których<br />
             powinieneś wiedzieć na jej temat.
         </p>
-        <div id="coffee" onclick="count_clicks()" style="cursor:pointer">
-      
+        <div id="coffee" style="cursor:pointer">
+
         </div>
-        <input type="submit" id="button" value="Wybierz swoją ulubioną kawe!" onclick="count_clicks()">
+        <input type="button" id="button" title="Wybierz rodzaj kawy, a strona ją dla ciebie zapamięta!" value="Kliknij!" onclick="count_clicks()">
+        <span id="timersS"></span>
+        <span id="timersS1">Jesteś na stronie od godziny:</span>
     </article>
     <footer>Wszelkie prawa zastrzeżone, Jakub Zwolski gr5 Informatyka</footer>
 

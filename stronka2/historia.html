@@ -7,9 +7,10 @@
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="javascript.js"></script>
 
 </head>
-<body>
+<body onload="czas()">
     <header>
         <h1>Moim Okiem na Kawę</h1>
     </header>
@@ -43,26 +44,31 @@
     </nav>
     <div id="nawigacja">
         <dl>
-            Nawigacja
-            <dt> <a href="#">Start </a> </dt>
-            <dt> <a href="#E1">Odkrycie kawy </a> </dt>
-            <dt><a href="#E2">Nowa używka</a></dt>
-            <dt><a href="#E3">Kawa w Europie i Ameryce </a></dt>
+            <dt>Nawigacja</dt>
+            <dd> <a href="#">Start </a> </dd>
+            <dd> <a href="#E1">Odkrycie kawy </a> </dd>
+            <dd><a href="#E2">Nowa używka</a></dd>
+            <dd><a href="#E3">Kawa w Europie i Ameryce </a></dd>
         </dl>
     </div>
     <article id="artykuł_hist">
-        <img src="kawa1.jpg" id="kawa1" alt="Kawa" />
+        <img src="kawa1.jpg" class="kawa1" alt="Kawa" /><br />
+        <input type="button" id="small" value="Małe Obrazki" name="123" onclick="small()" />
+        <input type="button" id="medium" value="Średnie Obrazki" name="123" onclick="medium()" />
+        <input type="button" id="big" value="Duże Obrazki" name="123" onclick="big()" />
         <h2 id="E1">Odkrycie kawy</h2>
         <p>
             Owoce kawowca wykorzystywane były w Etiopii już w I tysiącleciu p.n.e. Spożywano je gotowane z dodatkiem masła i soli, lecz nie uprawiano, tylko zbierano ze stanowisk naturalnych. Prawdopodobnie kawę odkrył lud Oromo, zamieszkujący etiopski region Kaffa[1]. Przypuszczalnie w XIII lub XIV wieku przywiezione zostały przez kupców arabskich do Jemenu, który do dziś dostarcza najdroższą kawę. Prawdopodobnie tam opracowano metodę preparowania nasion przez prażenie i wytwarzanie z nich napoju, który Beduini rozpowszechnili w całej Arabii. Z odkryciem kawy wiążą się dwie legendy. Pierwsza przypisuje związane z tym zasługi sufiemu Shaikh ash-Shadhilemu. Miał on w czasie swojej wędrówki po Afryce przypadkiem natrafić na stado wyjątkowo pobudzonych kóz. Z ciekawości spróbował zjadanych przez nie owoców, poznając ich niezwykły wpływ na organizm człowieka. Druga, bardzo podobna historia jako odkrywcę podaje etiopskiego pasterza o imieniu Kaldi.
         </p>
         <p class="prawo">źródło:<a href="https://pl.wikipedia.org/wiki/Kawa" target="blank">pl.wikipedia.org/wiki/Kawa</a></p>
+        <img src="kawa3.jpg" class="kawa1" alt="Kawa" />
         <h2 id="E2">Nowa używka na Bliskim Wschodzie</h2>
         <p>
             Już w końcu XV wieku położony na południowym krańcu Morza Czerwonego arabski port Al-Mucha (bardziej znany jako Mokka) był dużym ośrodkiem handlu ziarnami rośliny zwanej kohwet. Wraz z ekspansją arabską zwyczaj picia kawy rozpowszechnił się na całym Bliskim Wschodzie. Początkowo budził on wiele nieufności, czy wręcz niechęci. Spożycie kawy zostało zabronione w Mekce w roku 1511, a w Kairze w 1532. Wobec szybkiego wzrostu popularności napoju zakazy wkrótce zniesiono. W 1554 w Stambule otwarto pierwszą kawiarnię. O ile w Arabii kontrowersje wokół nowej używki szybko zanikły, o tyle nad Bosforem jej kariera rozwijała się znacznie wolniej. Pobudzające właściwości palonych ziaren bywały obiektem krytyki religijnych ortodoksów, a pierwsze kawiarnie stawały się nieraz forami burzliwych dyskusji, co niepokoiło sułtanów. Restrykcje ustały u schyłku XVI wieku. Zarazem Imperium Osmańskie jako pośrednik w handlu stało się mocarstwem kawowym.
         </p>
 
         <p class="prawo">źródło:<a href="https://pl.wikipedia.org/wiki/Kawa" target="blank">pl.wikipedia.org/wiki/Kawa</a></p>
+        <img src="kawa2.jpg" class="kawa1" alt="Kawa" />
         <h2 id="E3">
             Kawa w Europie i Ameryce
         </h2>
@@ -91,7 +97,8 @@
             Obecnie kawa jest jednym z najpopularniejszych na świecie napojów. Wypija jej się około 400 mld filiżanek rocznie.
         </p><br />
         <p class="prawo">źródło:<a href="https://pl.wikipedia.org/wiki/Kawa" target="blank">pl.wikipedia.org/wiki/Kawa</a></p>
-
+        <span id="timersS"></span>
+        <span id="timersS1">Jesteś na stronie od godziny:</span>
     </article>
     <footer>Wszelkie prawa zastrzeżone, Jakub Zwolski gr5 Informatyka</footer>
 
